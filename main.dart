@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
+import 'home_page.dart';
 
-void main(){
+void main() {
   runApp(MyApp());
 }
 
@@ -8,38 +9,14 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      title: 'Bottom nav bar',
+      title: 'Login Page',
+      debugShowCheckedModeBanner: false,
       theme: ThemeData(
-        primarySwatch: Colors.blue,
+        hintColor: Color(0xffc0f0e8),
+        primaryColor: Color(0xff80e0d1),
+        fontFamily: "Montserrat",
       ),
-      home: MyHome(),
-    );
-  }
-}
-class MyHome extends StatelessWidget {
-  @override
-  Widget build(BuildContext context) {
-    return Scaffold(
-      appBar: AppBar(
-        title: Text('Bottom nav bar'),
-      ),
-      //*=======2 or over navigation buttons under app display=====*
-      bottomNavigationBar: BottomNavigationBar(
-        items: [
-          BottomNavigationBarItem(
-            icon: Icon(Icons.home),
-            title: Text('Home'),
-          ),
-          BottomNavigationBarItem(
-            icon: Icon(Icons.person),
-            title: Text('profile'),
-          ),
-          BottomNavigationBarItem(
-            icon: Icon(Icons.notifications),
-            title: Text('Alarm'),
-          ),
-        ],
-      ),
+      home: HomePage(),
     );
   }
 }
